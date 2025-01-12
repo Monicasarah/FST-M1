@@ -18,3 +18,4 @@ with webdriver.Firefox() as driver:
     print("Purple button's classes are: ", purple_button.get_attribute("class"))
     slate_button = driver.find_element(By.XPATH, "//button[contains(@class, 'slate')]")
     print("Text in slate button is: ", slate_button.text)
+driver.quit()

@@ -16,3 +16,4 @@ with webdriver.Firefox() as driver:
     login.click()
 message = driver.find_element(By.CSS_SELECTOR, "h1.text-center")
     print("Login message: ", message.text)
+driver.quit()

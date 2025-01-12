@@ -10,3 +10,4 @@ with webdriver.Firefox() as driver:
     driver.find_element(By.LINK_TEXT, "About Us").click()
 
     print("New page title is: ", driver.title)
+driver.quit()

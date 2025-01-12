@@ -17,3 +17,4 @@ with webdriver.Firefox() as driver:
 
     message = driver.find_element(By.XPATH, "//h1[contains(@class, 'text-center')]")
     print("Login message: ", message.text)
+driver.quit()
