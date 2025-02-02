@@ -26,9 +26,9 @@ public class ConsumerTest {
 		   headers.put("Content-Type", "application/json");
 		   DslPart reqResBody = new PactDslJsonBody()
 				   .numberType("id", 2607)
-				   .stringType("firstName","Vinitha")
-				   .stringType("lastName","Ollala")
-				   .stringType("email","vinni26@mail.com");
+				   .stringType("firstName","Monica")
+				   .stringType("lastName","Peter")
+				   .stringType("email","monicapeter@mail.com");
 		  
 		   return builder.given("POST Request")
 				   .uponReceiving("A Request to create a user")
@@ -49,9 +49,9 @@ public class ConsumerTest {
 		
 		Map<String, Object> reqBody = new HashMap<String, Object>();
 		reqBody.put("id", 2607);
-		reqBody.put("firstName", "Vinitha");
-		reqBody.put("lastName", "Ollala");
-		reqBody.put("email", "vinni26@mail.com");
+		reqBody.put("firstName", "Monica");
+		reqBody.put("lastName", "Peter");
+		reqBody.put("email", "monicapeter@mail.com");
 		
 		given().baseUri("http://localhost:8282/api/users").headers(headers).body(reqBody)
 		.when().post()
