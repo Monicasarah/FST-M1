@@ -15,6 +15,8 @@
             <class name="activities.Activity5" />
             <class name="activities.Activity6" />
             <class name="activities.Activity7" />
+	<class name="activities.Activity8" />
+	<class name="activities.Activity9" />
         </classes>
     </test>
     
