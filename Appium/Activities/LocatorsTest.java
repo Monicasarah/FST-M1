@@ -1,4 +1,6 @@
-package activities;
+package example;
+
+
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -11,12 +13,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
-public class Activity1 {
+public class LocatorsTest {
 	//Declare appium driver
-	AndroidDriver driver;
+	AppiumDriver driver;
 	
 	@BeforeClass
 	public void setUp() throws MalformedURLException, URISyntaxException{
@@ -43,15 +46,15 @@ public class Activity1 {
 		//find digit 5 and tap it
 		driver.findElement(AppiumBy.id("com.android.calculator2:id/digit_5")).click();
 		//find plus symbol and tap it
-		driver.findElement(AppiumBy.accessibilityId("×")).click();
+		driver.findElement(AppiumBy.accessibilityId("plus")).click();
 		//find digit 9 and tap it
-		driver.findElement(AppiumBy.id("com.android.calculator2:id/digit_8")).click();
+		driver.findElement(AppiumBy.id("com.android.calculator2:id/digit_9")).click();
 		//find equal to symbol and tap it
 		driver.findElement(AppiumBy.accessibilityId("equals")).click();
 		
 		String result = driver.findElement(AppiumBy.id("com.android.calculator2:id/result")).getText();
 		
-		Assert.assertEquals(result, "40");
+		Assert.assertEquals(result, "14");
 		
 	}
 	
